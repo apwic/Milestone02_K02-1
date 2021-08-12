@@ -12,4 +12,5 @@ export class ContentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // TODO: Add content logics
 }
