@@ -12,4 +12,5 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // TODO: Add footer logics
 }
