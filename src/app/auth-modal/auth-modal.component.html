@@ -1,0 +1,35 @@
+<div class="auth-modal-fake-container"
+    [ngClass]="{hidden: isHidden()}">
+    <div (click)="close()" class="auth-modal-wrapper">
+    </div>
+    <div class="auth-modal-container card">
+        <button (click)="close()" class="auth-modal__close no-select">
+            <span class="material-icons">
+                close
+                </span>
+        </button>
+        <div class="auth-modal-content">
+            <div class="auth-modal-title">
+                {{ authTitle() }}
+            </div>
+            <div class="label">Username</div>
+            <input #usernameInput class="auth-modal-content-input auth-modal-content-input__username" type="text" name="username">
+            <div class="label">Password</div>
+            <input #passwordInput class="auth-modal-content-input auth-modal-content-input__password" type="password" name="password">
+            <div class="auth-confirm-container">
+                <button (click)="authenticate()" class="auth-confirm">
+                    {{ authConfirmText() }}
+                </button>
+            </div>
+            <div class="auth-error-container" *ngIf="showError">
+                <div class="auth-error">
+                    {{ errorText() }}
+                </div>
+            </div>
+            <div (click)="changeAuthScene()" class="auth-modal-q">
+                {{ authSceneChangeText() }}
+            </div>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,104 @@
+<div class="header-container">
+  <div class="header-left logo no-select">
+    <span class="logo-left">edu</span>
+    <span class="logo-right">kawan</span>
+  </div>
+  <div class="header-middle">
+    <div
+      (mouseover)="categoriesHovered = true"
+      (mouseleave)="categoriesHovered = false"
+      class="nav-item nav-item__categories nav-item-relative no-select"
+    >
+      Categories
+      <span class="material-icons"> expand_more </span>
+      <div class="nav-item-dropdown" *ngIf="categoriesHovered">
+        <div class="dropdown-container dropdown-long dropdown-multiple-section">
+          <div class="dropdown-section">
+            <div class="dropdown-item">
+              <span>Data Science</span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+            <div class="dropdown-item">
+              <span>Business</span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+            <div class="dropdown-item">
+              <span>Computer Science</span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+            <div class="dropdown-item">
+              <span>Information Technology</span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+            <div class="dropdown-item">
+              <span>Language Learning</span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+            <div class="dropdown-item">
+              <span>Health</span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+          </div>
+          <div class="dropdown-section dropdown-section-right">
+            <div class="dropdown-item">
+              <span>Personal Development</span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+            <div class="dropdown-item">
+              <span>Physical Science and Engineering</span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+            <div class="dropdown-item">
+              <span>Social Sciences</span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+            <div class="dropdown-item">
+              <span>Art and Humanities</span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+            <div class="dropdown-item">
+              <span>Math and Logic</span>
+              <span class="material-icons"> chevron_right </span>
+            </div>
+            <div class="dropdown-item">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <edk-searchbar></edk-searchbar>
+  </div>
+  <div class="header-right no-select" *ngIf="!isAuthenticated()">
+    <button (click)="login()" class="auth-item">Login</button>
+    <button (click)="signUp()" class="auth-item">Sign Up</button>
+  </div>
+  <div class="header-right no-select" *ngIf="isAuthenticated()">
+    <div
+      (mouseover)="activitiesHovered = true"
+      (mouseleave)="activitiesHovered = false"
+      class="nav-item nav-item-relative"
+    >
+      Activities
+      <span class="material-icons"> expand_more </span>
+      <div class="nav-item-dropdown" *ngIf="activitiesHovered">
+        <div class="dropdown-container dropdown-short">
+          <div class="dropdown-item">
+            <span>Webinar</span>
+            <span class="material-icons"> chevron_right </span>
+          </div>
+          <div class="dropdown-item">
+            <span>Scholarship</span>
+            <span class="material-icons"> chevron_right </span>
+          </div>
+          <div class="dropdown-item">
+            <span>Course</span>
+            <span class="material-icons"> chevron_right </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="nav-item">Profile</button>
+  </div>
+</div>
+<!--  -->

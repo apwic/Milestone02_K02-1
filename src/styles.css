@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    --edk-color-blue: #548ca8;
+    --edk-color-orange: #ffaa4c;
+    --edk-color-wheat: #fdf6f0;
+}
+.no-select {
+    user-select: none;
+}
+button {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    background-color: unset;
+    padding: unset;
+}
+input[type="text"], input[type="password"]{
+    appearance: none;
+    border: unset;
+    outline: unset;
+}
+[hidden] {
+    display: none;
+}
+.card {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
