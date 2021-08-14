@@ -1,0 +1,42 @@
+.swiper-container {
+    width: 16.5rem;
+}   
+.card {
+    width: 16.5rem;
+    background-color: #FDF6F0;
+    border-radius: 10px;
+    margin-bottom: 150px;
+    margin-left: 150px;
+}
+
+h2 {
+    font-size: 2.0emp;
+    color: #548CA8;
+    margin-top: 100px;
+    margin-left: 230px;
+    text-shadow: 1px 1px 1px;
+    font-family: 'Noto Serif';
+}
+
+.pendaftar {
+    font-family: "Noto Serif", serif;
+    color: #87A7B3;
+    font-size: 0.8em;
+    margin-left: 1rem;
+}
+
+.judul-webinar {
+    font-family: "Noto Serif", serif;
+    font-size: 1rem;
+    text-align: center;
+    color: #0A1931;
+    margin-right: 1rem;
+}
+
+.penyelenggara {
+    font-family: "Noto Serif", serif;
+    color: #87A7B3;
+    font-size: 0.8em;
+    margin-left: 1rem;
+}
+
