@@ -1,8 +1,8 @@
 .content-container {
-    width: auto;
-    height: calc(100% - 154px);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0px 48px;
+  width: auto;
+  height: calc(100% - 154px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 48px;
 }

@@ -1,47 +1,43 @@
-/* 
-    ADJUSTMENT: 36.92px --> 36px for better CSS rendering
-*/
 .searchbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    width: 300px;
-    height: 36px;
-    border-radius: 36px;
-    border-width: 2px;
-    border-color: var(--edk-color-blue);
-    border-style: solid;
-    /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 300px;
+  height: 36px;
+  border-radius: 36px;
+  border-width: 2px;
+  border-color: var(--edk-color-blue);
+  border-style: solid;
 }
-.searchbar__input, .searchbar__input:focus {
-    height: 100%;
-    appearance: none;
-    border: none;
-    outline: none;
-    background-color: inherit;
-    height: inherit;
-    color: var(--edk-color-blue);
-    font-family: 'Noto Sans';
-    font-size: 16px;
-    padding-left: 12px;
-    width: 252px;
-    box-sizing: border-box;
+.searchbar__input,
+.searchbar__input:focus {
+  height: 100%;
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  height: inherit;
+  color: var(--edk-color-blue);
+  font-family: "Noto Sans";
+  font-size: 16px;
+  padding-left: 12px;
+  width: 252px;
+  box-sizing: border-box;
 }
 .searchbar__input::placeholder {
-    font-family: 'Noto Sans';
-    font-size: 16px;
-    color: var(--edk-color-blue);
+  font-family: "Noto Sans";
+  font-size: 16px;
+  color: var(--edk-color-blue);
 }
 .searchbar__button {
-    box-sizing: border-box;
-    background-color: var(--edk-color-blue);
-    color: white;
-    width: 36px;
-    height: 36px;
-    position: relative;
-    right: -1px;
-    border-top-right-radius: 36px;
-    border-bottom-right-radius: 36px;
-    /* border: solid 1px var(--edk-color-blue); */
+  box-sizing: border-box;
+  background-color: var(--edk-color-blue);
+  color: white;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  right: -1px;
+  border-top-right-radius: 36px;
+  border-bottom-right-radius: 36px;
 }

@@ -1,61 +1,61 @@
 .activity-container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .activity-image-container {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 .activity-image {
-    object-fit: fill;
-    width: 100%;
-    height: 100%;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
 }
 .activity-details-container {
-    box-sizing: border-box;
-    width: 100%;
-    height: calc(100% - 200px);
-    padding: 32px;
-    font-family: 'Noto Sans';
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - 200px);
+  padding: 32px;
+  font-family: "Noto Sans";
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
 .activity-details__spread {
-    color: var(--edk-color-blue);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 12px;
+  color: var(--edk-color-blue);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
 }
 .activity-details__centered {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .activity-details__title {
-    color: black;
-    font-weight: bold;
-    font-size: 14px;
-    margin: 16px 20px;
-    text-align: center;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 16px 20px;
+  text-align: center;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .activity-details__join {
-    color: white;
-    margin-bottom: 8px;
-    padding: 4px 12px;
-    background-color: #ffb740;
-    border-radius: 8px;
-    box-shadow: 0 4px rgba(0, 0, 0, 0.2);
-    font-family: 'Noto Sans';
+  color: white;
+  margin-bottom: 8px;
+  padding: 4px 12px;
+  background-color: #ffb740;
+  border-radius: 8px;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.2);
+  font-family: "Noto Sans";
 }
 .activity-details__join[disabled] {
-    background-color: #dcdcdc;
+  background-color: #dcdcdc;
 }

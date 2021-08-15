@@ -6,7 +6,7 @@ import { ScrimService } from '../services/scrim.service';
 @Component({
   selector: 'edk-auth-modal',
   templateUrl: './auth-modal.component.html',
-  styleUrls: ['./auth-modal.component.css']
+  styleUrls: ['./auth-modal.component.css'],
 })
 export class AuthModalComponent implements OnInit {
   @ViewChild('usernameInput') usernameInput: ElementRef;
@@ -16,10 +16,11 @@ export class AuthModalComponent implements OnInit {
 
   constructor(
     private authService: FakeAuthService,
-    private scrimService: ScrimService) { }
+    private scrimService: ScrimService
+  ) {}
 
-  ngOnInit(): void {
-    this.authService.authErrorEventEmitter.subscribe(scene => {
+  ngOnInit() {
+    this.authService.authErrorEventEmitter.subscribe((scene) => {
       if (scene === AuthScene.Login) {
         this.createLoginError();
         this.showError = true;
@@ -34,9 +35,8 @@ export class AuthModalComponent implements OnInit {
         }, 3000);
       }
     });
-    this.authService.authSuccessEventEmitter.subscribe(account => {
+    this.authService.authSuccessEventEmitter.subscribe((account) => {
       this.close();
-      // Do something on login
     });
   }
 
@@ -76,7 +76,7 @@ export class AuthModalComponent implements OnInit {
   }
 
   createLoginError() {
-    return 'Invalid password or username doesn\'t exist !';
+    return "Invalid password or username doesn't exist !";
   }
 
   createSignUpError() {
@@ -88,5 +88,4 @@ export class AuthModalComponent implements OnInit {
       ? this.createLoginError()
       : this.createSignUpError();
   }
-
 }

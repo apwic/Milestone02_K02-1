@@ -18,7 +18,7 @@ interface Activity {
 
 interface ActivityRef {
   id: number;
-  type: ActivityType
+  type: ActivityType;
 }
 
 export { Activity, ActivityType, ActivityRef };

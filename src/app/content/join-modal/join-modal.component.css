@@ -1,95 +1,91 @@
 .join-modal-fake-container {
-    position: fixed;
-    /* top: 0; */
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* margin: auto; */
-    width: 100%;
-    height: 100%;
-    z-index: 2021;
-    /* background-color: var(--edk-color-blue); */
-    transition: bottom 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2021;
+  transition: bottom 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .join-modal-wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 2022;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2022;
 }
 .join-modal-container {
-    /* position: fixed; */
-    width: 600px;
-    height: 520px;
-    background-color: white;
-    padding: 48px 24px;
-    box-sizing: border-box;
-    position: relative;
-    background-color: var(--edk-color-wheat);
-    z-index: 2023;
+  width: 600px;
+  height: 520px;
+  background-color: white;
+  padding: 48px 24px;
+  box-sizing: border-box;
+  position: relative;
+  background-color: var(--edk-color-wheat);
+  z-index: 2023;
 }
 .join-modal-fake-container.hidden {
-    bottom: -100%;
+  bottom: -100%;
 }
 .join-modal-fake-container {
-    bottom: 0;
+  bottom: 0;
 }
 .join-modal__close {
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    color: var(--edk-color-blue)
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  color: var(--edk-color-blue);
 }
 .join-modal-content {
-    box-sizing: border-box;
-    font-family: 'Noto Sans';
-    font-size: 1.25em;
-    color: var(--edk-color-blue);
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
+  box-sizing: border-box;
+  font-family: "Noto Sans";
+  font-size: 1.25em;
+  color: var(--edk-color-blue);
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .join-modal-title {
-    font-size: 1.3em;
-    display: block;
-    text-align: center;
+  font-size: 1.3em;
+  display: block;
+  text-align: center;
 }
 .label {
-    padding: 24px;
-    padding-left: 0;
-    font-size: 1em;
+  padding: 24px;
+  padding-left: 0;
+  font-size: 1em;
 }
 .join-confirm-container {
-    box-sizing: border-box;
-    padding: 24px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  box-sizing: border-box;
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .join-confirm {
-    box-sizing: border-box;
-    height: 48px;
-    display: block;
-    font-family: 'Noto Sans';
-    font-size: 0.8em;
-    color: var(--edk-color-blue);
-    border: 2px solid var(--edk-color-blue);
-    padding: 4px 24px;
-    border-radius: 24px;
+  box-sizing: border-box;
+  height: 48px;
+  display: block;
+  font-family: "Noto Sans";
+  font-size: 0.8em;
+  color: var(--edk-color-blue);
+  border: 2px solid var(--edk-color-blue);
+  padding: 4px 24px;
+  border-radius: 24px;
 }
 .join-confirm:hover {
-    background-color: var(--edk-color-blue);
-    color: var(--edk-color-wheat);
+  background-color: var(--edk-color-blue);
+  color: var(--edk-color-wheat);
 }
 .join-modal-description {
-    text-align: center;
-    margin: 24px 0;
-    font-size: 16px;
+  text-align: center;
+  margin: 24px 0;
+  font-size: 16px;
 }

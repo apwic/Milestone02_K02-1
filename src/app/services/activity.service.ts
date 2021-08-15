@@ -3,7 +3,7 @@ import { Activity, ActivityRef, ActivityType } from '../models/activity.model';
 import { FakeAuthService } from './fake-auth.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ActivityService {
   joinModalHidden: boolean = true;
@@ -19,7 +19,7 @@ export class ActivityService {
       durationInMinutes: 90,
       participants: 2730,
       date: new Date(2021, 7, 31),
-      imageUrl: '../../assets/images/webinar/slide 1.jpg'
+      imageUrl: '../../assets/images/webinar/slide 1.jpg',
     },
     {
       id: 1,
@@ -29,7 +29,7 @@ export class ActivityService {
       durationInMinutes: 120,
       participants: 1100,
       date: new Date(2021, 8, 1),
-      imageUrl: '../../assets/images/webinar/slide 2.jpg'
+      imageUrl: '../../assets/images/webinar/slide 2.jpg',
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ export class ActivityService {
       durationInMinutes: 120,
       participants: 2000,
       date: new Date(2021, 8, 5),
-      imageUrl: '../../assets/images/webinar/slide 3.jpg'
+      imageUrl: '../../assets/images/webinar/slide 3.jpg',
     },
     {
       id: 3,
@@ -49,9 +49,9 @@ export class ActivityService {
       durationInMinutes: 90,
       participants: 1500,
       date: new Date(2021, 8, 7),
-      imageUrl: '../../assets/images/webinar/slide 4.jpg'
+      imageUrl: '../../assets/images/webinar/slide 4.jpg',
     },
-  ]
+  ];
 
   scholarshipActivites: Activity[] = [
     {
@@ -60,7 +60,7 @@ export class ActivityService {
       title: 'Paragon Scholarship',
       provider: 'PT Paragon Indonesia',
       participants: 50,
-      imageUrl: '../../assets/images/scholarship/slide 1.jpg'
+      imageUrl: '../../assets/images/scholarship/slide 1.jpg',
     },
     {
       id: 1,
@@ -68,7 +68,7 @@ export class ActivityService {
       title: 'Jabar Future Scholarship',
       provider: 'Provinsi Jawa Barat',
       participants: 30000,
-      imageUrl: '../../assets/images/scholarship/slide 2.jpg'
+      imageUrl: '../../assets/images/scholarship/slide 2.jpg',
     },
     {
       id: 2,
@@ -76,7 +76,7 @@ export class ActivityService {
       title: 'Beasiswa Indonesia Merdeka',
       provider: 'PT Indonesia Sejahtera',
       participants: 2000,
-      imageUrl: '../../assets/images/scholarship/slide 3.jpg'
+      imageUrl: '../../assets/images/scholarship/slide 3.jpg',
     },
     {
       id: 3,
@@ -84,9 +84,9 @@ export class ActivityService {
       title: 'Salman Scholarship',
       provider: 'Salman Community',
       participants: 1500,
-      imageUrl: '../../assets/images/scholarship/slide 4.jpg'
+      imageUrl: '../../assets/images/scholarship/slide 4.jpg',
     },
-  ]
+  ];
 
   courseActivites: Activity[] = [
     {
@@ -96,7 +96,7 @@ export class ActivityService {
       provider: 'Boston University',
       durationInWeeks: 7,
       participants: 150,
-      imageUrl: '../../assets/images/course/slide 1.jpg'
+      imageUrl: '../../assets/images/course/slide 1.jpg',
     },
     {
       id: 1,
@@ -105,7 +105,7 @@ export class ActivityService {
       provider: 'Bandung Univeristy',
       durationInWeeks: 2,
       participants: 100,
-      imageUrl: '../../assets/images/course/slide 2.jpg'
+      imageUrl: '../../assets/images/course/slide 2.jpg',
     },
     {
       id: 2,
@@ -114,7 +114,7 @@ export class ActivityService {
       provider: 'Cimahi University',
       durationInWeeks: 2,
       participants: 200,
-      imageUrl: '../../assets/images/course/slide 3.jpg'
+      imageUrl: '../../assets/images/course/slide 3.jpg',
     },
     {
       id: 3,
@@ -123,12 +123,11 @@ export class ActivityService {
       provider: 'Cirebon University',
       durationInWeeks: 5,
       participants: 1500,
-      imageUrl: '../../assets/images/course/slide 4.jpg'
+      imageUrl: '../../assets/images/course/slide 4.jpg',
     },
-  ]
-  
-  constructor(private authService: FakeAuthService) {
-  }
+  ];
+
+  constructor(private authService: FakeAuthService) {}
 
   showModal() {
     this.joinModalHidden = false;
@@ -153,21 +152,21 @@ export class ActivityService {
     let activity = this.webinarActivites[0];
     switch (activityRef.type) {
       case ActivityType.Webinar:
-        this.webinarActivites.forEach(activity_ => {
+        this.webinarActivites.forEach((activity_) => {
           if (activity_.id === activityRef.id) {
             activity = activity_;
           }
         });
         break;
       case ActivityType.Scholarship:
-        this.scholarshipActivites.forEach(activity_ => {
+        this.scholarshipActivites.forEach((activity_) => {
           if (activity_.id === activityRef.id) {
             activity = activity_;
           }
         });
         break;
       default:
-        this.courseActivites.forEach(activity_ => {
+        this.courseActivites.forEach((activity_) => {
           if (activity_.id === activityRef.id) {
             activity = activity_;
           }

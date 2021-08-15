@@ -3,4 +3,4 @@ enum AuthScene {
   SignUp,
 }
 
-export { AuthScene }
+export { AuthScene };

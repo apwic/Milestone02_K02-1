@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthScene } from '../models/auth.model';
 import { FakeAuthService } from '../services/fake-auth.service';
 import { ScrimService } from '../services/scrim.service';
@@ -6,18 +6,16 @@ import { ScrimService } from '../services/scrim.service';
 @Component({
   selector: 'edk-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   categoriesHovered: boolean = false;
   activitiesHovered: boolean = false;
 
   constructor(
     private scrimService: ScrimService,
-    private authService: FakeAuthService) { }
-
-  ngOnInit(): void {
-  }
+    private authService: FakeAuthService
+  ) {}
 
   login() {
     this.authService.setAuthScene(AuthScene.Login);

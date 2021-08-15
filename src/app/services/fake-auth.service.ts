@@ -4,10 +4,9 @@ import { ActivityRef, ActivityType } from '../models/activity.model';
 import { AuthScene } from '../models/auth.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FakeAuthService {
-
   modalHidden: boolean = true;
   accounts: Account[] = [
     {
@@ -16,26 +15,26 @@ export class FakeAuthService {
       activities: [
         {
           id: 0,
-          type: ActivityType.Webinar
+          type: ActivityType.Webinar,
         },
         {
           id: 1,
-          type: ActivityType.Scholarship
+          type: ActivityType.Scholarship,
         },
         {
           id: 3,
-          type: ActivityType.Course
-        }
-      ]
-    }
+          type: ActivityType.Course,
+        },
+      ],
+    },
   ];
   scene: AuthScene = AuthScene.Login;
   authErrorEventEmitter = new EventEmitter<AuthScene>();
   authSuccessEventEmitter = new EventEmitter<Account>();
   isAuthenticated: boolean = false;
   currentAccount: Account;
-  
-  constructor() { }
+
+  constructor() {}
 
   showModal() {
     this.modalHidden = false;
@@ -54,7 +53,9 @@ export class FakeAuthService {
   }
 
   authSceneChangeText(): string {
-    return this.scene === AuthScene.Login ? 'Don\'t have an account?' : 'Already have an account?';
+    return this.scene === AuthScene.Login
+      ? "Don't have an account?"
+      : 'Already have an account?';
   }
 
   authConfirmText(): string {
@@ -99,8 +100,8 @@ export class FakeAuthService {
       let newAccount: Account = {
         username: username,
         password: password,
-        activities: []
-      }
+        activities: [],
+      };
       this.accounts.push(newAccount);
       this.login(username, password);
     }
@@ -108,7 +109,7 @@ export class FakeAuthService {
 
   isUsernameExist(username: string): boolean {
     let usernameExists = false;
-    this.accounts.forEach(account => {
+    this.accounts.forEach((account) => {
       if (account.username == username) {
         usernameExists = true;
       }
@@ -120,9 +121,9 @@ export class FakeAuthService {
     let acc: Account = {
       username: '',
       password: '',
-      activities: []
-    }
-    this.accounts.forEach(account => {
+      activities: [],
+    };
+    this.accounts.forEach((account) => {
       if (account.username == username) {
         acc = account;
       }
@@ -132,7 +133,7 @@ export class FakeAuthService {
 
   isActivityJoined(type: ActivityType, id: number) {
     let joined = false;
-    this.currentAccount.activities.forEach(activity => {
+    this.currentAccount.activities.forEach((activity) => {
       if (activity.type === type && activity.id === id) {
         joined = true;
       }

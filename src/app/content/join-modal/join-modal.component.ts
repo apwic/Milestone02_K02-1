@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivityType } from 'src/app/models/activity.model';
 import { ActivityService } from 'src/app/services/activity.service';
 import { ScrimService } from 'src/app/services/scrim.service';
@@ -8,17 +8,13 @@ import { ScrimService } from 'src/app/services/scrim.service';
   templateUrl: './join-modal.component.html',
   styleUrls: ['./join-modal.component.css'],
 })
-export class JoinModalComponent implements OnInit {
+export class JoinModalComponent {
   title: string;
 
   constructor(
     private activityService: ActivityService,
     private scrimService: ScrimService
   ) {}
-
-  ngOnInit(): void {
-    // this.title = this.activityService.currentActivity.title;
-  }
 
   getModalTitle() {
     let currentActivityRef = this.activityService.currentActivityRef;

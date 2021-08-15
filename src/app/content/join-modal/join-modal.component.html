@@ -1,26 +1,19 @@
-<div class="join-modal-fake-container"
-    [ngClass]="{hidden: isHidden()}">
-    <div (click)="close()" class="join-modal-wrapper">
+<div class="join-modal-fake-container" [ngClass]="{ hidden: isHidden() }">
+  <div (click)="close()" class="join-modal-wrapper"></div>
+  <div class="join-modal-container card">
+    <button (click)="close()" class="join-modal__close no-select">
+      <span class="material-icons"> close </span>
+    </button>
+    <div class="join-modal-content">
+      <div class="join-modal-title">
+        JOIN {{ getModalTitle().toUpperCase() }}
+      </div>
+      <div class="join-modal-description">
+        Are you sure you want to join "{{ getTitle() }}" ?
+      </div>
+      <div class="join-confirm-container">
+        <button (click)="join()" class="join-confirm">CONFIRM</button>
+      </div>
     </div>
-    <div class="join-modal-container card">
-        <button (click)="close()" class="join-modal__close no-select">
-            <span class="material-icons">
-                close
-                </span>
-        </button>
-        <div class="join-modal-content">
-            <div class="join-modal-title">
-                JOIN {{ getModalTitle().toUpperCase() }}
-            </div>
-            <div class="join-modal-description">
-                Are you sure you want to join "{{ getTitle() }}" ?
-            </div>
-            <div class="join-confirm-container">
-                <button (click)="join()" class="join-confirm">
-                    CONFIRM
-                </button>
-            </div>
-        </div>
-        
-    </div>
+  </div>
 </div>
