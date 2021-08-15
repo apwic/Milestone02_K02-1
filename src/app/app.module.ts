@@ -12,6 +12,7 @@ import { ScrimComponent } from './scrim/scrim.component';
 import { AuthModalComponent } from './auth-modal/auth-modal.component';
 import { ItemComponent } from './content/item/item.component';
 import { ActivityComponent } from './content/item/activity/activity.component';
+import { JoinModalComponent } from './content/join-modal/join-modal.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ActivityComponent } from './content/item/activity/activity.component';
     ScrimComponent,
     AuthModalComponent,
     ItemComponent,
-    ActivityComponent
+    ActivityComponent,
+    JoinModalComponent
   ],
   imports: [
     BrowserModule,

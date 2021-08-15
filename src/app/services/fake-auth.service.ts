@@ -1,6 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Account } from '../models/account.model';
-import { ActivityType } from '../models/activity.model';
+import { ActivityRef, ActivityType } from '../models/activity.model';
 import { AuthScene } from '../models/auth.model';
 
 @Injectable({
@@ -13,7 +13,20 @@ export class FakeAuthService {
     {
       username: 'edukawan',
       password: 'edukawan',
-      activities: []
+      activities: [
+        {
+          id: 0,
+          type: ActivityType.Webinar
+        },
+        {
+          id: 1,
+          type: ActivityType.Scholarship
+        },
+        {
+          id: 3,
+          type: ActivityType.Course
+        }
+      ]
     }
   ];
   scene: AuthScene = AuthScene.Login;
@@ -125,5 +138,9 @@ export class FakeAuthService {
       }
     });
     return joined;
+  }
+
+  joinActivity(activityRef: ActivityRef) {
+    this.currentAccount.activities.push(activityRef);
   }
 }

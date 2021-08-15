@@ -17,9 +17,13 @@
             </div>
         </div>
         <div *ngIf="isAuthenticated()" class="activity-details__centered">
-            <div class="activity-details__join">
-                JOIN
-            </div>
+            <button
+                class="activity-details__join"
+                [disabled]="isActivityJoined()"
+                (click)="confirmJoinActivity()"
+                >
+                {{ activityJoinString() }}
+            </button>
         </div>
         <div class="activity-details__spread">
             <span>

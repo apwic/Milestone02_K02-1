@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Activity } from 'src/app/models/activity.model';
+import { Activity, ActivityRef } from 'src/app/models/activity.model';
+import { ActivityService } from 'src/app/services/activity.service';
 import { FakeAuthService } from 'src/app/services/fake-auth.service';
+import { ScrimService } from 'src/app/services/scrim.service';
 
 @Component({
   selector: 'edk-activity',
@@ -25,7 +27,11 @@ export class ActivityComponent implements OnInit {
     'Desember'
   ]
 
-  constructor(private authService: FakeAuthService) { }
+  constructor(
+    private authService: FakeAuthService,
+    private activityService: ActivityService,
+    private scrimService: ScrimService
+    ) { }
 
   ngOnInit(): void {
   }
@@ -47,12 +53,24 @@ export class ActivityComponent implements OnInit {
   }
 
   activityJoinString() {
+    return this.isActivityJoined() ? 'JOINED' : 'JOIN'
+  }
+
+  isActivityJoined() {
     return this.authService.isActivityJoined(this.activity.type, this.activity.id)
-      ? 'JOINED'
-      : 'JOIN'
   }
 
   isAuthenticated() {
     return this.authService.isAuthenticated;
+  }
+
+  confirmJoinActivity() {
+    let activityRef: ActivityRef = {
+      id: this.activity.id,
+      type: this.activity.type
+    }
+    this.activityService.changeCurrentActivity(activityRef);
+    this.activityService.showModal();
+    this.scrimService.show();
   }
 }

@@ -6,14 +6,8 @@
     width: 100%;
     height: 200px;
     overflow: hidden;
-    /* text-align: center; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 .activity-image {
-    /* max-width: 100%;
-    max-height: 100%; */
     object-fit: fill;
     width: 100%;
     height: 100%;
@@ -60,4 +54,8 @@
     background-color: #ffb740;
     border-radius: 8px;
     box-shadow: 0 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Noto Sans';
+}
+.activity-details__join[disabled] {
+    background-color: #dcdcdc;
 }

@@ -67,7 +67,6 @@ export class AuthModalComponent implements OnInit {
   }
 
   authenticate() {
-    console.log('authenticate() called')
     this.showError = false;
     let username = (<HTMLInputElement>this.usernameInput.nativeElement).value;
     let password = (<HTMLInputElement>this.passwordInput.nativeElement).value;

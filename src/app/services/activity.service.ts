@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Activity, ActivityType } from '../models/activity.model';
+import { Activity, ActivityRef, ActivityType } from '../models/activity.model';
+import { FakeAuthService } from './fake-auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ActivityService {
+  joinModalHidden: boolean = true;
+  currentActivityRef: ActivityRef;
+  currentActivity: Activity;
 
   webinarActivites: Activity[] = [
     {
@@ -123,5 +127,53 @@ export class ActivityService {
     },
   ]
   
-  constructor() { }
+  constructor(private authService: FakeAuthService) {
+  }
+
+  showModal() {
+    this.joinModalHidden = false;
+  }
+
+  hideModal() {
+    this.joinModalHidden = true;
+  }
+
+  changeCurrentActivity(activityRef: ActivityRef) {
+    this.currentActivityRef = activityRef;
+    this.currentActivity = this.getActivityByRef(activityRef);
+  }
+
+  join() {
+    this.currentActivity.participants++;
+    this.authService.joinActivity(this.currentActivity);
+    this.hideModal();
+  }
+
+  getActivityByRef(activityRef: ActivityRef): Activity {
+    let activity = this.webinarActivites[0];
+    switch (activityRef.type) {
+      case ActivityType.Webinar:
+        this.webinarActivites.forEach(activity_ => {
+          if (activity_.id === activityRef.id) {
+            activity = activity_;
+          }
+        });
+        break;
+      case ActivityType.Scholarship:
+        this.scholarshipActivites.forEach(activity_ => {
+          if (activity_.id === activityRef.id) {
+            activity = activity_;
+          }
+        });
+        break;
+      default:
+        this.courseActivites.forEach(activity_ => {
+          if (activity_.id === activityRef.id) {
+            activity = activity_;
+          }
+        });
+        break;
+    }
+    return activity;
+  }
 }

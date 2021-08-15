@@ -1,9 +1,9 @@
-import { Activity } from "./activity.model";
+import { ActivityRef } from "./activity.model";
 
 interface Account {
   username: string;
   password: string;
-  activities: Activity[]
+  activities: ActivityRef[]
 }
 
 export { Account }

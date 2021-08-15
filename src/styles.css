@@ -27,9 +27,6 @@ input[type="text"], input[type="password"]{
 .card {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
 }
-/* .swiper-pagination-bullet {
-    margin: 0 6px;
-} */
 .carousel-pagination-bullet {
     margin: 0 6px;
     background-color: var(--edk-color-blue);

@@ -16,4 +16,9 @@ interface Activity {
   date?: Date;
 }
 
-export { Activity, ActivityType };
+interface ActivityRef {
+  id: number;
+  type: ActivityType
+}
+
+export { Activity, ActivityType, ActivityRef };
