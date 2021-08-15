@@ -20,9 +20,7 @@ export class ItemComponent implements OnInit {
   @ViewChild('carouselPagination') paginationEl: ElementRef;
 
   @Input() activities: Activity[];
-  // TODO: Add pagination elements
   paginationOptions: PaginationOptions;
-  // TODO: Add navigation elements
   navigationOptions: NavigationOptions;
   currentActivity: string;
 
@@ -35,7 +33,9 @@ export class ItemComponent implements OnInit {
       prevEl: `.activity_${this.getActivityTitle().toLowerCase()}.carousel-button__before`,
     }
     this.paginationOptions = {
-      el: `.activity_${this.getActivityTitle().toLowerCase()}.swiper-pagination`
+      el: `.activity_${this.getActivityTitle().toLowerCase()}.swiper-pagination`,
+      bulletClass: 'swiper-pagination-bullet carousel-pagination-bullet',
+      bulletActiveClass: 'carousel-pagination-bullet__active'
     };
   }
 

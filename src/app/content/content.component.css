@@ -1,8 +1,6 @@
-/* TODO: Add content styling */
 .content-container {
     width: auto;
     height: calc(100% - 154px);
-    /* background-color: dodgerblue; */
     display: flex;
     justify-content: space-around;
     align-items: center;

@@ -19,6 +19,5 @@ export class ContentComponent implements OnInit {
     this.scholarshipActivites = this.activityService.scholarshipActivites;
     this.courseActivites = this.activityService.courseActivites;
   }
-
-  // TODO: Add content logics
+  
 }
