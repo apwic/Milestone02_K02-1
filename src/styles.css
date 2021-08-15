@@ -4,6 +4,7 @@ html, body {
     --edk-color-blue: #548ca8;
     --edk-color-orange: #ffaa4c;
     --edk-color-wheat: #fdf6f0;
+    height: 100%;
 }
 .no-select {
     user-select: none;
@@ -25,4 +26,7 @@ input[type="text"], input[type="password"]{
 }
 .card {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+.swiper-pagination-bullet {
+    margin: 0 6px;
 }

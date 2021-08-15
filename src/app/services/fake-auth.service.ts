@@ -1,5 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Account } from '../models/account.model';
+import { ActivityType } from '../models/activity.model';
 import { AuthScene } from '../models/auth.model';
 
 @Injectable({
@@ -8,7 +9,6 @@ import { AuthScene } from '../models/auth.model';
 export class FakeAuthService {
 
   modalHidden: boolean = true;
-  isLoggedIn: boolean = false;
   accounts: Account[] = [
     {
       username: 'edukawan',
@@ -19,7 +19,7 @@ export class FakeAuthService {
   scene: AuthScene = AuthScene.Login;
   authErrorEventEmitter = new EventEmitter<AuthScene>();
   authSuccessEventEmitter = new EventEmitter<Account>();
-  isAuthenticated: boolean;
+  isAuthenticated: boolean = false;
   currentAccount: Account;
   
   constructor() { }
@@ -115,5 +115,15 @@ export class FakeAuthService {
       }
     });
     return acc;
+  }
+
+  isActivityJoined(type: ActivityType, id: number) {
+    let joined = false;
+    this.currentAccount.activities.forEach(activity => {
+      if (activity.type === type && activity.id === id) {
+        joined = true;
+      }
+    });
+    return joined;
   }
 }

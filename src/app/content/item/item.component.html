@@ -1,0 +1,51 @@
+<div class="item-wrapper">
+  <div class="item-title">
+    {{ getActivityTitle() }}
+  </div>
+  <div class="carousel-container">
+    <div class="carousel-wrapper">
+      <swiper
+        class="carousel"
+        [pagination]="paginationOptions"
+        [navigation]="navigationOptions"
+      >
+        <ng-template swiperSlide *ngFor="let activity of activities">
+          <edk-activity [activity]="activity"></edk-activity>
+        </ng-template>
+      </swiper>
+      <div
+        #carouselPrevButton
+        class="carousel-button__before no-select"
+        [ngClass]="{
+          activity_webinar: getActivityTitle() == 'Webinar',
+          activity_scholarship: getActivityTitle() == 'Scholarship',
+          activity_course: getActivityTitle() == 'Course'
+        }"
+      >
+        <span class="material-icons"> navigate_before </span>
+      </div>
+      <div
+        #carouselNextButton
+        class="carousel-button__next no-select"
+        [ngClass]="{
+          activity_webinar: getActivityTitle() == 'Webinar',
+          activity_scholarship: getActivityTitle() == 'Scholarship',
+          activity_course: getActivityTitle() == 'Course'
+        }"
+      >
+        <span class="material-icons"> navigate_next </span>
+      </div>
+      <div class="carousel-pagination-container">
+        <div
+          #carouselPagination
+          class="swiper-pagination"
+          [ngClass]="{
+            activity_webinar: getActivityTitle() == 'Webinar',
+            activity_scholarship: getActivityTitle() == 'Scholarship',
+            activity_course: getActivityTitle() == 'Course'
+          }"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>

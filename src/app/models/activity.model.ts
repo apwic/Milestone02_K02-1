@@ -5,13 +5,15 @@ enum ActivityType {
 }
 
 interface Activity {
-    type: ActivityType;
-    title: string;
-    participants: number;
-    durationInMinutes: number;
-    instructor: string;
-    date?: Date;
+  id: number;
+  type: ActivityType;
+  title: string;
+  participants: number;
+  durationInMinutes?: number;
+  durationInWeeks?: number;
+  provider: string;
+  imageUrl: string;
+  date?: Date;
 }
 
-
-export { Activity, ActivityType }
+export { Activity, ActivityType };

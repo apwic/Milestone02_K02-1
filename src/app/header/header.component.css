@@ -60,6 +60,7 @@
     box-sizing: border-box;
     padding-top: 12px;
     top: 32px;
+    z-index: 50;
 }
 .dropdown-container {
     /* padding: 12px; */
